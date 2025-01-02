@@ -30,7 +30,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -69,7 +69,7 @@ const Banner = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full ${
-                index === currentSlide ? "bg-white" : "bg-gray-400"
+                index === currentSlide ? "bg-white hover:bg-white" : "bg-gray-400"
               }`}
             ></button>
           ))}
