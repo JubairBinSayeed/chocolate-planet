@@ -1,22 +1,12 @@
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {
-      animation: {
-        marquee: "marquee 9s linear infinite",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
-        }
-    },
+    extend: {},
   },
-  plugins: [require('daisyui')],
-  daisyui: {
-    themes: [
-      'coffee'
-    ],
-  },
-},
+  plugins: [
+    require('daisyui'),
+  ],
 }

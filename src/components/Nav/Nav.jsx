@@ -1,7 +1,4 @@
-// import { NavLink } from "react-router-dom";
-
 import { NavLink } from "react-router-dom";
-import Banner from "../Banner/Banner";
 
 
 const Nav = () => {
@@ -15,10 +12,7 @@ const Nav = () => {
                     <NavLink to='/wantToBuy'>Want To Buy</NavLink>
                 </ul>
                 <button className="btn">Button</button>
-            </nav>   
-            <div className="mt-56">
-                <Banner/>
-            </div>       
+            </nav>       
         </div>
     );
 };
