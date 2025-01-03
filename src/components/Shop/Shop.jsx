@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ChocolateCard from "../ChocolateCard/ChocolateCard";
-import PlaceOrder from "../PlaceOrder/PlaceOrder";
 
 
 const Shop = () => {
@@ -22,9 +21,6 @@ const Shop = () => {
                         chocolate={chocolate}
                     />)
                 }
-            </div>
-            <div>
-                <PlaceOrder/>
             </div>        
             </div>
         </div>

@@ -25,9 +25,13 @@ const ChocolateDetailsPage = () => {
         chocolate.status === "Available" ? <div className="badge badge-success font-bold">{chocolate.status}</div> : <div className="badge badge-error font-bold">{chocolate.status}</div>
     }<br/>
             <div className="flex gap-5">
-            <button className="btn btn-primary mt-4">Order Now</button>
-            <button className="btn btn-primary mt-4">Add To Cart</button>
-            <button className="btn btn-primary mt-4">Add To WishList</button>
+            {
+                chocolate.status === "Available" ? <div>
+                <button className="btn btn-primary mt-4">Order Now</button><br />
+                <button className="btn btn-primary mt-4">Add To Cart</button><br />
+                <button className="btn btn-primary mt-4">Add To WishList</button>
+                </div> : <button className="btn btn-primary mt-4">Add To WishList</button>
+            }
             </div>
           </div>
         </div>

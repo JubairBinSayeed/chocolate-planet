@@ -5,6 +5,8 @@ import Shop from "../components/Shop/Shop";
 import WantToBuy from "../components/WantToBuy/WantToBuy";
 import Register from "../components/Register/Register";
 import ChocolateDetailsPage from "../components/ChocolateDetailsPage/ChocolateDetailsPage.jsx";
+import PlaceOrder from "../components/PlaceOrder/PlaceOrder.jsx";
+import Wishlist from "../components/WishList/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,9 +38,17 @@ const router = createBrowserRouter([
             throw new Error('Failed to fetch chocolates');
           }
           const data = await response.json();
-          return data.chocolates; // Return only the chocolates array
+          return data.chocolates; 
         },
       },
+      {
+        path:'/addToCart',
+        element:<PlaceOrder/>
+      },
+      {
+        path:'/wishlist',
+        element:<Wishlist/>
+      }
     ],
   },
 ]);
