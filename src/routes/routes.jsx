@@ -8,31 +8,39 @@ import ChocolateDetailsPage from "../components/ChocolateDetailsPage/ChocolateDe
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <MainLayout/>,
+    path: '/',
+    element: <MainLayout />,
     children: [
-        {
-            path:'/',
-        element: <Home/>
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/shop',
+        element: <Shop />,
+      },
+      {
+        path: '/wantToBuy',
+        element: <WantToBuy />,
+      },
+      {
+        path: '/register',
+        element: <Register />,
+      },
+      {
+        path: '/shop/:id',
+        element: <ChocolateDetailsPage />,
+        loader: async () => {
+          const response = await fetch('/chocolate.json');
+          if (!response.ok) {
+            throw new Error('Failed to fetch chocolates');
+          }
+          const data = await response.json();
+          return data.chocolates; // Return only the chocolates array
         },
-        {
-            path:'/shop',
-            element: <Shop/>
-        },
-        {
-            path:'/wantToBuy',
-            element: <WantToBuy/>
-        },
-        {
-          path:'/register',
-          element: <Register/>
-        },
-        {
-          path:'/shop/:id',
-          element:<ChocolateDetailsPage/>,
-          loader: () => fetch('../chocolate.json')
-        }
-    ]
-  }
+      },
+    ],
+  },
 ]);
-export default router
+
+export default router;

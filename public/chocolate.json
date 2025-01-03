@@ -6,7 +6,7 @@
         "image": "https://i.postimg.cc/zXB0Ykr6/image-2025-01-02-121016846.png",
         "price": 3.99,
         "description": "Rich and smooth dark chocolate made from the finest cocoa beans.",
-        "status": "available"
+        "status": "Available"
       },
       {
         "id": 2,
@@ -14,7 +14,7 @@
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBAQJwrt5t0MUUZpajZohjIzfK32NEUrXnPw&s",
         "price": 2.99,
         "description": "Creamy milk chocolate with a hint of vanilla.",
-        "status": "sold"
+        "status": "Sold"
       },
       {
         "id": 3,
@@ -22,7 +22,7 @@
         "image": "https://i.postimg.cc/tghzNS3Z/image-2025-01-02-121251282.png",
         "price": 4.49,
         "description": "A delightful combination of milk chocolate and crunchy hazelnuts.",
-        "status": "available"
+        "status": "Available"
       },
       {
         "id": 4,
@@ -30,7 +30,7 @@
         "image": "https://i.postimg.cc/rsYGwvkb/image-2025-01-02-121703160.png",
         "price": 3.49,
         "description": "Silky white chocolate with a creamy texture and a hint of sweetness.",
-        "status": "sold"
+        "status": "Sold"
       },
       {
         "id": 5,
@@ -38,7 +38,7 @@
         "image": "https://i.postimg.cc/8P9BQQwf/image-2025-01-02-121957602.png",
         "price": 4.99,
         "description": "Dark chocolate infused with refreshing mint flavor.",
-        "status": "available"
+        "status": "Available"
       },
       {
         "id": 6,
@@ -46,7 +46,7 @@
         "image": "https://c8.alamy.com/comp/2WHYDH2/caramel-and-chocolate-cream-swirl-isolated-on-white-background-top-view-2WHYDH2.jpg",
         "price": 3.99,
         "description": "",
-        "status": "sold"
+        "status": "Sold"
       },
       {
         "id": 7,
@@ -54,7 +54,7 @@
         "image": "https://i.postimg.cc/VvG6Qw8S/image-2025-01-02-125927690.png",
         "price": 4.29,
         "description": "Milk chocolate with crunchy almond pieces.",
-        "status": "available"
+        "status": "Available"
       },
       {
         "id": 8,
@@ -62,7 +62,7 @@
         "image": "https://i.postimg.cc/FszzbYy0/image-2025-01-02-130106653.png",
         "price": 5.49,
         "description": "Dark chocolate with a fruity raspberry filling.",
-        "status": "available"
+        "status": "Available"
       },
       {
         "id": 9,
@@ -70,7 +70,7 @@
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnrcT9jiwftprX24RclD4ewwiAUz-umRyZYg&s",
         "price": 3.99,
         "description": "Milk chocolate with a creamy peanut butter filling.",
-        "status": "sold"
+        "status": "Sold"
       },
       {
         "id": 10,
@@ -78,7 +78,7 @@
         "image": "https://billyscandies.com/wp-content/uploads/2020/08/coconut-cream-side.jpg",
         "price": 4.29,
         "description": "White chocolate with a smooth coconut cream filling.",
-        "status": "available"
+        "status": "Available"
       }
     ]
   }

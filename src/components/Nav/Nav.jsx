@@ -13,7 +13,7 @@ const Nav = () => {
                 </ul>
                 <Link to='/register' className="btn">Register</Link>
             </nav>       
-        </div>
+            </div>
     );
 };
 
