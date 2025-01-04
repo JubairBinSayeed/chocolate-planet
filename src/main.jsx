@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes/routes'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -10,8 +11,12 @@ import router from './routes/routes'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='font-sourGummy'>
+    <div className='font-sourGummy' >
     <RouterProvider router={router}></RouterProvider>
+    <Toaster
+       position="top-right"
+       reverseOrder={false}
+    />
     </div>
   </StrictMode>,
 )

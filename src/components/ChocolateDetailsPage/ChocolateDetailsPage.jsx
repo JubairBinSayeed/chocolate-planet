@@ -1,11 +1,15 @@
-import { useLoaderData, useParams } from "react-router-dom";
+
+import {  useLoaderData, useParams } from "react-router-dom";
+import { saveWishListCard } from "./utils";
 
 const ChocolateDetailsPage = () => {
-  const chocolates = useLoaderData(); // chocolates is now an array
+  const chocolates = useLoaderData();
+  const addToWishList = () =>{
+        saveWishListCard(id)
+  }
   const { id } = useParams();
   const paramInt = parseInt(id, 10);
 
-  // Find the chocolate with the matching ID
   const chocolate = chocolates.find(choco => choco.id === paramInt);
 
   return (
@@ -26,12 +30,13 @@ const ChocolateDetailsPage = () => {
     }<br/>
             <div className="flex gap-5">
             {
-                chocolate.status === "Available" ? <div>
+                chocolate.status === "Available" ? 
+                   <div>
                 <button className="btn btn-primary mt-4">Order Now</button><br />
                 <button className="btn btn-primary mt-4">Add To Cart</button><br />
-                <button className="btn btn-primary mt-4">Add To WishList</button>
-                </div> : <button className="btn btn-primary mt-4">Add To WishList</button>
-            }
+                <button onClick={addToWishList}  className="btn btn-primary mt-4">Add To WishList</button>
+                </div> : <button onClick={addToWishList} className="btn btn-primary mt-4">Add To WishList</button>
+              }
             </div>
           </div>
         </div>

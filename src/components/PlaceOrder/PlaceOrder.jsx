@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const AddToCart = () => {
   const [quantity, setQuantity] = useState(1);
@@ -13,7 +13,7 @@ const AddToCart = () => {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl p-4">
+    <div className="card w-full bg-base-100 shadow-xl p-4">
       <figure>
         <img
           src="https://via.placeholder.com/150"
