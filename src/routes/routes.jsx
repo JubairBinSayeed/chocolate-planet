@@ -47,7 +47,15 @@ const router = createBrowserRouter([
       },
       {
         path:'/wishlist',
-        element:<Wishlist/>
+        element:<Wishlist/>,
+        loader: async () => {
+          const response = await fetch('/chocolate.json');
+          if (!response.ok) {
+            throw new Error('Failed to fetch chocolates');
+          }
+          const data = await response.json();
+          return data.chocolates; 
+        }
       }
     ],
   },

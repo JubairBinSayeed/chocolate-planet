@@ -1,17 +1,15 @@
-
 import {  useLoaderData, useParams } from "react-router-dom";
-import { saveWishListCard } from "./utils";
+import { saveWishListCard } from "../../utils";
 
 const ChocolateDetailsPage = () => {
   const chocolates = useLoaderData();
-  const addToWishList = () =>{
-        saveWishListCard(id)
-  }
   const { id } = useParams();
   const paramInt = parseInt(id, 10);
 
   const chocolate = chocolates.find(choco => choco.id === paramInt);
-
+  const addToWishList = () =>{
+    saveWishListCard(paramInt)
+}
   return (
     <div className="hero bg-base-200 min-h-screen">
       {chocolate ? (
