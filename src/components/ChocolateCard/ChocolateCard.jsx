@@ -20,7 +20,12 @@ const ChocolateCard = ({chocolate}) => {
     }$</p>
     <p>{description}</p>
     {
-        status === "Available" ? <div className="badge badge-success font-bold">{status}</div> : <div className="badge badge-error font-bold">{status}</div>
+        status === "Available" ? 
+        <div>
+          <div aria-label="success" className="status animate-bounce status-success"></div> <div className="badge badge-success font-bold">{status}</div>
+        </div> : <div>
+        <div aria-label="success" className="status animate-bounce status-error"></div>  <div className="badge badge-error font-bold">{status}</div>
+        </div>
     }
     <div className="flex gap-5  justify-end" >
     <Link to={`/shop/${id}`}  className="btn btn-primary">Details</Link>

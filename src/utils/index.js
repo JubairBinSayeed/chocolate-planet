@@ -1,22 +1,29 @@
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
+
 
 const getWishListCard = () => {
-    const wishlistCard = localStorage.getItem('wishlist')
-    if(wishlistCard){
-        return JSON.parse(wishlistCard)
-    }
-    return []
-}
-const saveWishListCard = id => {
-    const wishListCard = getWishListCard()
-    const exist = wishListCard.find( chocoId => chocoId === id)
-    if (!exist) {
-        toast.success("Chocolate added successfully")
-        wishListCard.push(id);
-        localStorage.setItem('wishlist' , JSON.stringify(wishListCard))
-    } else {
-        toast.error("Cannot add more than one chcolate or you will have diabetis")
-    }
-}
+  const wishlistCard = localStorage.getItem("wishlist");
+  return wishlistCard ? JSON.parse(wishlistCard) : [];
+};
 
-export { getWishListCard, saveWishListCard }
+
+const saveWishListCard = (id) => {
+  const wishListCard = getWishListCard();
+  if (!wishListCard.includes(id)) {
+    toast.success("Chocolate added successfully!");
+    wishListCard.push(id);
+    localStorage.setItem("wishlist", JSON.stringify(wishListCard));
+  } else {
+    toast.error("Chocolate already in wishlist!");
+  }
+};
+
+
+const deleteWishListCard = (id) => {
+  const chocolates = getWishListCard();
+  const updatedChocolates = chocolates.filter((chocoId) => chocoId !== id);
+  localStorage.setItem("wishlist", JSON.stringify(updatedChocolates));
+  toast.success("Chocolate removed from wishlist!");
+};
+
+export { getWishListCard, saveWishListCard, deleteWishListCard };
