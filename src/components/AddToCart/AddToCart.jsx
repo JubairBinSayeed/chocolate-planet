@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const PlaceOrder = () => {
+const AddToCart = () => {
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -141,4 +141,4 @@ const PlaceOrder = () => {
   );
 };
 
-export default PlaceOrder;
+export default AddToCart;

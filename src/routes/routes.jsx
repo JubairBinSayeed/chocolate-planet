@@ -2,11 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout/MainLayout";
 import Home from "../components/Home/Home";
 import Shop from "../components/Shop/Shop";
-import WantToBuy from "../components/WantToBuy/WantToBuy";
 import Register from "../components/Register/Register";
 import ChocolateDetailsPage from "../components/ChocolateDetailsPage/ChocolateDetailsPage.jsx";
-import PlaceOrder from "../components/PlaceOrder/PlaceOrder.jsx";
 import Wishlist from "../components/WishList/Wishlist.jsx";
+import AddToCart from "../components/AddToCart/AddToCart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
       {
         path: '/shop',
         element: <Shop />,
-      },
-      {
-        path: '/wantToBuy',
-        element: <WantToBuy />,
       },
       {
         path: '/register',
@@ -43,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addToCart',
-        element:<PlaceOrder/>
+        element:<AddToCart/>
       },
       {
         path:'/wishlist',
