@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+import { saveaddToCart } from "../../utils";
 
 
 const ChocolateCard = ({chocolate}) => {
     const {id,image,chocolate_name,status,description} = chocolate
     let {price} = chocolate
+    const handleAddToCart = () => {
+      saveaddToCart(parseInt(id))
+    }
     return (
 <div className="flex border-b-2 border-[#8C593C] rounded-xl hover:scale-105 transition  mb-5  bg-base-100 shadow-sm">
   <figure className="mt-10 ml-10">
@@ -29,7 +33,7 @@ const ChocolateCard = ({chocolate}) => {
     }
     <div className="flex gap-5  justify-end" >
     <Link to={`/shop/${id}`}  className="btn btn-primary">Details</Link>
-    <button className="btn btn-primary" disabled={status === "Sold"}>Add To cart</button>
+    <button onClick={handleAddToCart}  className="btn btn-primary" disabled={status === "Sold"}>Add To cart</button>
     </div>
   </div>
 </div>

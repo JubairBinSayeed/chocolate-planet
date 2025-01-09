@@ -9,8 +9,7 @@ const Nav = () => {
                 <ul className="flex space-x-4 text-[#8C593C] font-bold items-center">
                     <NavLink to='/' className={(({isActive}) => isActive ? "underline underline-offset-4 font-extrabold  rounded-lg" : "font-bold")}>Home</NavLink>
                     <NavLink to='/shop' className={(({isActive}) => isActive ? "underline underline-offset-4 font-extrabold  rounded-lg" : "font-bold")}>Shop</NavLink>
-                    <NavLink to='/addToCart' className={(({isActive}) => isActive ? "underline underline-offset-4 font-extrabold  rounded-lg" : "font-bold")}>Add To Cart</NavLink>
-                    <NavLink to='/wishlist' className={(({isActive}) => isActive ? "underline underline-offset-4 font-extrabold  rounded-lg" : "font-bold")}>WishList</NavLink>
+                    <NavLink to='/wishlist' className={(({isActive}) => isActive ? "underline underline-offset-4 font-extrabold  rounded-lg" : "font-bold")}>Bookmarks</NavLink>
                 </ul>
                 <Link to='/register' className="btn">Register</Link>
             </nav>       

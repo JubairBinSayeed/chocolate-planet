@@ -30,10 +30,8 @@ const ChocolateDetailsPage = () => {
             {
                 chocolate.status === "Available" ? 
                    <div>
-                <button className="btn btn-primary mt-4">Order Now</button><br />
-                <button className="btn btn-primary mt-4">Add To Cart</button><br />
-                <button onClick={addToWishList}  className="btn btn-primary mt-4">Add To WishList</button>
-                </div> : <button onClick={addToWishList} className="btn btn-primary mt-4">Add To WishList</button>
+                <button onClick={addToWishList}  className="btn btn-primary mt-4">Add To Bookmarks</button>
+                </div> : <button onClick={addToWishList} className="btn btn-primary mt-4">Add To Bookmarks</button>
               }
             </div>
           </div>
